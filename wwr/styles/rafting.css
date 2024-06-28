@@ -1,3 +1,4 @@
+/* Reset and base styles */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 :root {
@@ -16,8 +17,6 @@ body {
     background-color: var(--background-color);
     margin: 0;
     padding: 0;
-    max-width: 1200px;
-    margin: auto;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -37,20 +36,40 @@ a {
     color: var(--secondary-color);
 }
 
-a.social-media {
-    text-decoration: none;
-    color: var(--secondary-color);
+/* Header styles */
+header {
+    background-color: var(--primary-color);
+    padding: 10px 20px;
 }
 
-/* Hero Container Styles */
-.hero {
-    position: relative;
-    width: 100%;
+.header-grid {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+}
+
+.header-grid img {
+    max-width: 100%;
     height: auto;
 }
 
+nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav a {
+    margin-left: 20px;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Hero section styles */
+.hero {
+    position: relative;
+}
+
 .hero img {
-    display: block;
     width: 100%;
     height: auto;
 }
@@ -79,4 +98,65 @@ a.social-media {
     float: right;
     margin: 0 0 10px 10px;
     width: 30%;
+}
+
+/* Sections */
+section {
+    margin: 40px 0;
+    padding: 0 20px;
+}
+
+section h2 {
+    font-size: 2em;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+section p {
+    text-align: justify;
+}
+
+.adventures {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.adventures figure {
+    text-align: center;
+    margin: 20px;
+}
+
+.adventures img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.adventures figcaption {
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+.sociallinks {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.sociallinks a {
+    margin-left: 10px;
+}
+
+.sociallinks img {
+    width: 30px;
+    height: auto;
 }
