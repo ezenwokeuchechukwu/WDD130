@@ -38,9 +38,13 @@
   color: #fff;
 }
 
+.navbar a:hover {
+  text-decoration: underline;
+}
+
 h1 {
   color: steelblue;
-  border-bottom: 2px solid black; 
+  border-bottom: 2px solid black;
 }
 
 img {
@@ -53,10 +57,6 @@ img {
 
 p {
   padding: 10px;
-}
-
-main {
-  margin: 1rem;
 }
 
 aside {
@@ -87,14 +87,17 @@ footer {
   text-align: center;
 }
 
-header, footer, .main-content {
+/* Ensure max-width and centering for header, footer, and .container */
+header, footer, .container {
   max-width: 840px;
   margin: 0 auto;
 }
 
+/* Grid layout for main and aside */
 .grid {
   display: grid;
   grid-template-columns: 20rem 1fr;
+  gap: 20px;
   align-items: start;
 }
 
