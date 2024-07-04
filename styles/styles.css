@@ -5,6 +5,13 @@
   box-sizing: border-box;
 }
 
+/* Container for limiting width and centering */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
 /* Class Selectors */
 .box {
   margin: 1rem;
@@ -49,7 +56,7 @@ p {
 }
 
 main {
-  margin: 1rem; 
+  margin: 1rem;
 }
 
 aside {
@@ -80,18 +87,17 @@ footer {
   text-align: center;
 }
 
-
-header, footer {
+header, footer, .main-content {
   max-width: 840px;
-  margin: 0 auto; 
+  margin: 0 auto;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: 20rem 1fr; 
-  align-items: center;
+  grid-template-columns: 20rem 1fr;
+  align-items: start;
 }
 
 main {
-  margin: 1rem; 
+  margin: 1rem;
 }
