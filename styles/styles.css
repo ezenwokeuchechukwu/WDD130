@@ -88,7 +88,7 @@ footer {
 }
 
 /* Ensure max-width and centering for header, footer, and .container */
-header, footer, .container {
+header, footer, .grid {
   max-width: 840px;
   margin: 0 auto;
 }
@@ -104,4 +104,3 @@ header, footer, .container {
 main {
   margin: 1rem;
 }
-
