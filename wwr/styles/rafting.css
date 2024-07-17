@@ -2,11 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 :root {
-    --primary-color: #0073e6;  
-    --secondary-color: #ff5733; 
-    --accent-color: #ffc300;    
-    --text-color: #333;         
-    --background-color: #f4f4f4; 
+    --primary-color: #0073e6;  /* Ensures good contrast with white text */
+    --secondary-color: #ff5733; /* Ensures good contrast with white text */
+    --accent-color: #ffc300;    /* Used sparingly to ensure contrast */
+    --text-color: #333;         /* Dark gray for good contrast on light background */
+    --background-color: #f4f4f4; /* Light background for good readability */
     --heading-font: 'Roboto', sans-serif;
     --body-font: 'Roboto', sans-serif;
 }
@@ -17,6 +17,9 @@ body {
     background-color: var(--background-color);
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure full height of viewport */
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -34,11 +37,13 @@ p {
 a {
     text-decoration: none;
     color: var(--secondary-color);
+    font-weight: bold; /* Ensure links stand out */
 }
 
 /* Header styles */
 header {
     background-color: var(--primary-color);
+    color: #fff;
     padding: 10px 20px;
 }
 
@@ -67,28 +72,32 @@ nav a {
 /* Hero section styles */
 .hero {
     position: relative;
+    text-align: center;
+    color: white;
+    overflow: hidden; /* Ensure content doesn't overflow */
 }
 
 .hero img {
+    display: block;
     width: 100%;
     height: auto;
 }
 
 .hero h1 {
     position: absolute;
-    top: 20%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: var(--accent-color);
-    font-size: 3em;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+    background-color: rgba(0, 0, 0, 0.7); /* Increase opacity for better contrast */
+    padding: 10px 20px;
+    border-radius: 10px;
 }
 
 .hero article {
     position: absolute;
     bottom: 10%;
     left: 5%;
-    background-color: rgba(255, 255, 255, 0.8); 
+    background-color: rgba(255, 255, 255, 0.9); /* Increase opacity for better contrast */
     padding: 20px;
     border-radius: 10px;
     max-width: 90%;
@@ -139,70 +148,66 @@ section p {
     font-style: italic;
 }
 
-/* Contact Page Styles */
-.contact-info, .employee-profiles, .contact-form {
-    margin: 20px auto;
-    max-width: 800px;
+/* Newsletter Signup Section */
+.newsletter-signup {
+    background-color: var(--primary-color);
+    color: #fff;
     padding: 20px;
-    background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.contact-info h2, .employee-profiles h2, .contact-form h2 {
     text-align: center;
-    color: var(--primary-color);
 }
 
-.map-container iframe {
-    width: 100%;
-    height: 450px;
-    border: 0;
-    border-radius: 10px;
-}
-
-.employee-profiles figure {
-    text-align: center;
-    margin: 20px 0;
-}
-
-.employee-profiles img {
-    max-width: 150px;
-    height: auto;
-    border-radius: 50%;
-}
-
-.contact-form form {
+.newsletter-signup form {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
-.contact-form div {
-    margin: 10px 0;
-}
-
-.contact-form label {
+.newsletter-signup label {
+    margin: 10px 0 5px 0;
     font-weight: bold;
 }
 
-.contact-form input[type="text"], .contact-form input[type="email"], .contact-form textarea {
-    width: 100%;
+.newsletter-signup input {
     padding: 10px;
-    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    border: none;
     border-radius: 5px;
 }
 
-.contact-form button {
-    background-color: var(--primary-color);
-    color: #fff;
-    padding: 10px;
+.newsletter-signup button {
+    padding: 10px 20px;
+    background-color: var(--accent-color);
+    color: var(--text-color);
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 1em;
+    font-weight: bold;
 }
 
-.contact-form button:hover {
+.newsletter-signup button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Call to Action Section */
+.cta {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.cta .btn {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.cta .btn:hover {
     background-color: var(--secondary-color);
 }
 
@@ -212,6 +217,7 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px;
+    margin-top: auto; /* Push footer to the bottom */
 }
 
 .sociallinks {
@@ -227,4 +233,76 @@ footer {
 .sociallinks img {
     width: 30px;
     height: auto;
+}
+/* Call to Action Section */
+.cta {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.cta .btn {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.cta .btn:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Trip Descriptions Section */
+.trip-descriptions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.trip-descriptions article {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.trip-descriptions img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.trip-descriptions h3 {
+    margin-top: 10px;
+}
+
+/* Trips Table Section */
+.trips-table {
+    padding: 20px;
+    text-align: center;
+}
+
+.trips-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.trips-table th, .trips-table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.trips-table th {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.trips-table td {
+    background-color: #fff;
 }
