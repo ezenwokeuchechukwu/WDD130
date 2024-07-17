@@ -211,53 +211,26 @@ section p {
     background-color: var(--secondary-color);
 }
 
-/* Trip Descriptions Section */
-.trip-descriptions {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 20px;
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto; /* Push footer to the bottom */
 }
 
-.trip-descriptions article {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.trip-descriptions img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-.trip-descriptions h3 {
+.sociallinks {
+    display: flex;
+    justify-content: center;
     margin-top: 10px;
 }
 
-/* Trips Table Section */
-.trips-table {
-    padding: 20px;
-    text-align: center;
+.sociallinks a {
+    margin: 0 10px;
 }
 
-.trips-table table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-}
-
-.trips-table th, .trips-table td {
-    padding: 10px;
-    border: 1px solid #ccc;
-}
-
-.trips-table th {
-    background-color: var(--primary-color);
-    color: #fff;
-}
-
-.trips-table td {
-    background-color: #fff;
+.sociallinks img {
+    width: 30px;
+    height: auto;
 }
